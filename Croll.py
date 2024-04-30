@@ -11,7 +11,7 @@ def trans_csv(df, name):
 
 ## 0. API 기본 정보
 key = '0443949103'
-url = f'https://data.ex.co.kr/openapi/business/curStateStation?key={key}&type=xml&numOfRows=10&pageNo=1'
+url = f'https://data.ex.co.kr/openapi/restinfo/hiwaySvarInfoList?key={key}&type=xml'
 #'https://data.ex.co.kr/openapi/restinfo/hiwaySvarInfoList?key=0443949103&type=xml'
 
 ## 1. 자동화 함수
