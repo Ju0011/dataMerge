@@ -2,19 +2,12 @@ import numpy as np
 import requests, xmltodict, json
 import pandas as pd
 
-#base_df = pd.read_csv("C:/Users/admin/Desktop/data/dataMerge/data/주유소실시간.csv")
-base_df = pd.read_csv("주유소가격_칼럼추가.csv")
+base_df = pd.read_csv("데이터추가.csv", encoding='cp949')
 copy_df = base_df.copy()
 
 add_df = pd.read_csv("C:/Users/admin/Desktop/data/dataMerge/rest/휴게소_완료.csv")
 
-# 'serviceAreaName' 칼럼에서 '주유소' 단어 제거하여 'restNm' 칼럼에 추가
-#copy_df['restNm'] = copy_df['serviceAreaName'].str.replace('주유소', '')
-
-#copy_df.to_csv('주유소가격_칼럼추가.csv', encoding='utf-8-sig',index=False)
-
 success_1 = 0
-copy_df['svarCd'] = ''
 for i in range(len(copy_df)):
     for j in range(len(add_df)):
         try:
@@ -29,4 +22,4 @@ for i in range(len(copy_df)):
         except:
             continue
 
-copy_df.to_csv('주유소_휴게소코드.csv', encoding='utf-8-sig',index=False)
+copy_df.to_csv('주유소_휴게소코드_완료.csv', encoding='utf-8-sig',index=False)
