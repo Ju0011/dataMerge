@@ -68,4 +68,4 @@ df = pd.concat(df_list)
 print(df)
 
 # csv 저장
-trans_csv(df, '주유소실시간')
+trans_csv(df, '음식점정보')
